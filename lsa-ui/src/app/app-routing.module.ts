@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SignupComponent } from './auth/signup/signup.component';
-import { LoginComponent } from './auth/login/login.component';
-import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { WelcomeComponent } from './home/welcome/welcome.component';
 
 
