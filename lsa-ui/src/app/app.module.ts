@@ -3,7 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeModule } from './home/home.module';
+import { AppMaterialModule } from './app-material.module';
+import { FlexLayoutModule } from '@angular/flex-layout'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { HomeModule } from '@/home/home.module';
+import { SharedModule } from '@/_compenent/shared.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +17,11 @@ import { HomeModule } from './home/home.module';
   imports: [
     BrowserModule,
     HomeModule,
-    AppRoutingModule
+    SharedModule,
+    AppRoutingModule,
+    AppMaterialModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

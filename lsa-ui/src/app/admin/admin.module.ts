@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { AdminRoutingModule } from './admin-routing.module';
+import { AdminDashboardComponent } from '@/admin/admin-dashboard/admin-dashboard.component';
+import { AdminRoutingModule } from '@/admin/admin-routing.module';
 
 
 @NgModule({

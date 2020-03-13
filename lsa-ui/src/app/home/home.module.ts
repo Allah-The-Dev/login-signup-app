@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
   declarations: [WelcomeComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [WelcomeComponent]
 })
 export class HomeModule { }
