@@ -1,1 +1,86 @@
-<p>signup works!</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Are you a new user?</mat-card-title>
+    <mat-card-subtitle>Register here...</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content fxLayout="column">
+    <form [formGroup]="signupForm" (ngSubmit)="submitSignupForm()">
+
+      <mat-form-field appearance="outline" fxFlex>
+        <mat-label>Full Name</mat-label>
+        <input matInput placeholder="Abc Xyz" type="text"
+          formControlName="username">
+        <mat-hint>Enter your full name</mat-hint>
+          <mat-error *ngIf="signupFormControls.username.invalid && signupFormControls.username.errors.required">
+            Full Name is required!
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex>
+        <mat-label>Email Id</mat-label>
+        <input matInput placeholder="AbcXyz@gmail.com" type="text"
+          formControlName="email"
+          required>
+        <mat-hint>Enter your email id</mat-hint>
+        <mat-error *ngIf="signupFormControls.email.invalid && signupFormControls.email.errors.required">
+          Email Id is required!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex>
+        <mat-label>Contact Number</mat-label>
+        <input matInput placeholder="9200321232" type="text"
+          formControlName="contactNo"
+          required>
+        <mat-hint>Enter your contact number</mat-hint>
+        <mat-error *ngIf="signupFormControls.contactNo.invalid && signupFormControls.contactNo.errors.required">
+          Contact Number is required!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex>
+        <mat-label>Date Of Birth</mat-label>
+        <input matInput placeholder="02/02/1996" type="text"
+          formControlName="dob"
+          required>
+        <mat-hint>Enter your date of birth</mat-hint>
+        <mat-error *ngIf="signupFormControls.dob.invalid && signupFormControls.dob.errors.required">
+          Date Of Birth is required!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex>
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="abc123@kjf" type="password"
+          formControlName="password"
+          required>
+        <mat-hint>Enter password</mat-hint>
+        <mat-error *ngIf="signupFormControls.password.invalid && signupFormControls.password.errors.required">
+          Password is required!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex>
+        <mat-label>Confirm Password</mat-label>
+        <input matInput placeholder="abc123@kjf" type="password"
+          formControlName="confirmPassword"
+          required>
+        <mat-hint>Enter password again</mat-hint>
+        <mat-error *ngIf="signupFormControls.confirmPassword.invalid && signupFormControls.confirmPassword.errors.required">
+          Password is required!
+        </mat-error>
+      </mat-form-field>
+
+      <div fxFlex *ngIf="signupForm.invalid">
+        <p style="background-color: red;">Please fill all the details!!</p>
+      </div>
+
+      <button type="submit" mat-raised-button
+      color="primary"
+      cdkFocusInitial>Submit</button>
+
+    </form>
+
+  </mat-card-content>
+
+</mat-card>
