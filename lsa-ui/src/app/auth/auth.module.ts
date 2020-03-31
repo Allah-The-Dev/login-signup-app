@@ -6,7 +6,7 @@ import { LoginComponent } from '@/auth/login/login.component';
 import { SignupComponent } from '@/auth/signup/signup.component';
 import { AppMaterialModule } from '@/app-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { FlexLayoutModule } from '@angular/flex-layout'
 
 @NgModule({
   declarations: [LoginComponent, SignupComponent],
@@ -14,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AuthRoutingModule,
     AppMaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule
   ]
 })
 export class AuthModule { }
